@@ -1,9 +1,11 @@
 import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
-
+import { viteSingleFile } from "vite-plugin-singlefile"
 export default defineNuxtConfig({
   ssr: true,
 
   app: {
+    // baseURL: './',
+    // buildAssetsDir: '/',
     head: {
       viewport: 'width=device-width, initial-scale=1, maximum-scale=1',
       charset: 'utf-8',
@@ -26,13 +28,16 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt'
   ],
   vite: {
-    plugins: [vanillaExtractPlugin({})]
+    plugins: [vanillaExtractPlugin({}), viteSingleFile()],
+    build: {
+      assetsInlineLimit: 0
+    }
   },
   runtimeConfig: {
     app: {
       name: 'Nuxt',
       version: '1.0.0',
-      baseURL: '/',
+      baseURL: './',
       host: 'localhost',
       port: 3000
     }
@@ -58,5 +63,9 @@ export default defineNuxtConfig({
     ]
   },
 
-  compatibilityDate: '2024-08-05'
+  compatibilityDate: '2024-08-05',
+
+  experimental: {
+    payloadExtraction: false,
+  },
 })

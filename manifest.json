@@ -9,6 +9,8 @@
   "documentAccess": "dynamic-page",
   "editorType": ["figma"],
   "networkAccess": {
-    "allowedDomains": ["https://cdn.tailwindcss.com"]
+    "allowedDomains": ["*"],
+    "reasoning":"MyPlugin queries https:// for example.",
+    "devAllowedDomains": ["*"]
   }
 }
