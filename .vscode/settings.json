@@ -1,0 +1,8 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnPaste": true,
+  "editor.formatOnSave": true,
+  "editor.formatOnType": false,
+  "editor.codeActionsOnSave": ["source.organizeImports"],
+  "prettier.configPath": "./.prettierrc"
+}
