@@ -1,7 +1,7 @@
-import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin';
+import { vanillaExtractPlugin } from '@vanilla-extract/vite-plugin'
 
 export default defineNuxtConfig({
-  ssr: false,
+  ssr: true,
 
   app: {
     head: {
@@ -10,9 +10,12 @@ export default defineNuxtConfig({
       meta: [
         { name: 'description', content: '' },
         { name: 'viewport', content: 'width=device-width' },
-        { name: 'format-detection', content: 'telephone=no' },
+        { name: 'format-detection', content: 'telephone=no' }
       ],
-    },
+      script: [
+        { src: 'https://cdn.tailwindcss.com', defer: true }
+      ]
+    }
   },
 
   typescript: { shim: false, strict: true },
@@ -20,10 +23,10 @@ export default defineNuxtConfig({
     'vuetify-nuxt-module',
     '@nuxt/icon',
     '@nuxt/eslint',
-    '@formkit/auto-animate/nuxt',
+    '@formkit/auto-animate/nuxt'
   ],
   vite: {
-    plugins: [vanillaExtractPlugin({})],
+    plugins: [vanillaExtractPlugin({})]
   },
   runtimeConfig: {
     app: {
@@ -31,8 +34,8 @@ export default defineNuxtConfig({
       version: '1.0.0',
       baseURL: '/',
       host: 'localhost',
-      port: 3000,
-    },
+      port: 3000
+    }
   },
 
   devtools: { enabled: true },
@@ -41,19 +44,19 @@ export default defineNuxtConfig({
     checker: true,
     config: {
       stylistic: {
-        commaDangle: 'never',
-      },
-    },
+        commaDangle: 'never'
+      }
+    }
   },
 
   icon: {
     customCollections: [
       {
         prefix: 'custom-icon',
-        dir: './assets/icons',
-      },
-    ],
+        dir: './assets/icons'
+      }
+    ]
   },
 
-  compatibilityDate: '2024-08-05',
-});
+  compatibilityDate: '2024-08-05'
+})
