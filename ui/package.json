@@ -1,8 +1,7 @@
 {
-  "name": "color-box",
+  "name": "design-system-figma-plugin-ui",
   "version": "1.0.0",
-  "description": "自分のFigmaプラグイン",
-  "main": "code.js",
+  "description": "design-system-figma-plugin-ui",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev --port 5173",
@@ -14,11 +13,7 @@
     "lint:fix": "npm run lint:js --fix && npm run lint:style --fix",
     "watch": "npm run build -- --watch"
   },
-  "author": "",
-  "license": "",
   "devDependencies": {
-    "@figma/eslint-plugin-figma-plugins": "*",
-    "@figma/plugin-typings": "^1.98.0",
     "@formkit/auto-animate": "^0.8.2",
     "@formkit/drag-and-drop": "^0.1.6",
     "@formkit/tempo": "^0.1.2",
@@ -51,27 +46,5 @@
     "vite": "^5.4.2",
     "vite-plugin-eslint2": "^4.4.0",
     "vuetify-nuxt-module": "^0.18.0"
-  },
-  "eslintConfig": {
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/recommended",
-      "plugin:@figma/figma-plugins/recommended"
-    ],
-    "parser": "@typescript-eslint/parser",
-    "parserOptions": {
-      "project": "./tsconfig.json"
-    },
-    "root": true,
-    "rules": {
-      "@typescript-eslint/no-unused-vars": [
-        "error",
-        {
-          "argsIgnorePattern": "^_",
-          "varsIgnorePattern": "^_",
-          "caughtErrorsIgnorePattern": "^_"
-        }
-      ]
-    }
   }
 }

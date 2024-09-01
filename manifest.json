@@ -1,8 +1,8 @@
 {
-  "name": "color-box",
+  "name": "design-system-figma-plugin",
   "id": "1409025224228248750",
   "api": "1.0.0",
-  "main": ".output/public/index.js",
+  "main": "code/code.js",
   "ui": "ui/.output/public/index.html",
   "capabilities": [],
   "enableProposedApi": false,
