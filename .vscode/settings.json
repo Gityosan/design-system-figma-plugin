@@ -1,8 +1,21 @@
 {
+  "prettier.configPath": "./.prettierrc",
+  "editor.guides.bracketPairs": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "editor.formatOnPaste": true,
-  "editor.formatOnSave": true,
-  "editor.formatOnType": false,
-  "editor.codeActionsOnSave": ["source.organizeImports"],
-  "prettier.configPath": "./.prettierrc"
+  "editor.formatOnSave": false,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "explicit",
+    "source.fixAll.stylelint": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
+  "git.ignoreLimitWarning": true,
+  "stylelint.validate": ["css", "scss", "less", "postcss"],
+  "css.validate": false,
+  "scss.validate": false,
+  "less.validate": false,
+  "search.exclude": {
+    "**/.yarn": true,
+    "**/.pnp.*": true
+  },
+  "explorer.compactFolders": false
 }

@@ -2,7 +2,21 @@
 *.log
 *.log.*
 node_modules
+.nuxt
+.nitro
+.cache
+.output
+.yarn
+.env
+dist
+out
 
-out/
-dist/
+auto-imports.d.ts
+components.d.ts
+
 code.js
+
+.pnp.*
+
+# eslint
+.eslintcache
